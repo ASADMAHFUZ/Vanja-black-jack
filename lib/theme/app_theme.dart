@@ -1,33 +1,36 @@
 import 'package:material_ui/material_ui.dart';
 
 class AppColors {
-  static const black = Color(0xFF0A0A0A);
-  static const surface = Color(0xFF141414);
-  static const card = Color(0xFF1C1C1C);
-  static const cardBorder = Color(0xFF2A2A2A);
-  static const teal = Color(0xFF2EC4B6);
-  static const tealBright = Color(0xFF3DFFF0);
-  static const tealDim = Color(0xFF1A8A80);
-  static const charcoal = Color(0xFF9A9A9A);
-  static const textPrimary = Color(0xFFF2F2F2);
-  static const textSecondary = Color(0xFFA0A0A0);
-  static const success = Color(0xFF3DDC97);
-  static const warning = Color(0xFFFFB020);
-  static const danger = Color(0xFFFF5A5A);
+  static const black = Color(0xFF122826);
+  static const background = Color(0xFFF5F8F8);
+  static const surface = Color(0xFFFFFFFF);
+  static const card = Color(0xFFFFFFFF);
+  static const cardBorder = Color(0xFFD7E3E1);
+  static const teal = Color(0xFF1FA89C);
+  static const tealBright = Color(0xFF2EC4B6);
+  static const tealDim = Color(0xFF0E7A72);
+  static const charcoal = Color(0xFF7A8584);
+  static const textPrimary = Color(0xFF152826);
+  static const textSecondary = Color(0xFF5B6B69);
+  static const success = Color(0xFF1FA971);
+  static const warning = Color(0xFFE39B12);
+  static const danger = Color(0xFFE04848);
+  static const softTeal = Color(0xFFE7F7F5);
+  static const softMint = Color(0xFFEFF8F6);
 }
 
 class AppTheme {
-  static ThemeData get dark {
+  static ThemeData get light {
     final base = ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.black,
-      colorScheme: const ColorScheme.dark(
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: AppColors.background,
+      colorScheme: const ColorScheme.light(
         primary: AppColors.teal,
         secondary: AppColors.tealBright,
         surface: AppColors.surface,
         error: AppColors.danger,
-        onPrimary: AppColors.black,
+        onPrimary: Colors.white,
         onSurface: AppColors.textPrimary,
       ),
     );
@@ -39,23 +42,42 @@ class AppTheme {
         fontFamily: 'Segoe UI',
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.black,
+        backgroundColor: AppColors.background,
         elevation: 0,
         centerTitle: false,
+        foregroundColor: AppColors.textPrimary,
         titleTextStyle: TextStyle(
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
           fontFamily: 'Segoe UI',
         ),
         iconTheme: IconThemeData(color: AppColors.teal),
       ),
-      cardTheme: CardThemeData(
-        color: AppColors.card,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: AppColors.cardBorder),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.teal,
+          foregroundColor: Colors.white,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 15,
+            fontFamily: 'Segoe UI',
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.tealDim,
+          side: const BorderSide(color: AppColors.teal),
+          padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -74,33 +96,6 @@ class AppTheme {
           borderSide: const BorderSide(color: AppColors.teal, width: 1.5),
         ),
         labelStyle: const TextStyle(color: AppColors.textSecondary),
-        hintStyle: const TextStyle(color: AppColors.charcoal),
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.teal,
-          foregroundColor: AppColors.black,
-          elevation: 0,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          textStyle: const TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 15,
-            fontFamily: 'Segoe UI',
-          ),
-        ),
-      ),
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: OutlinedButton.styleFrom(
-          foregroundColor: AppColors.teal,
-          side: const BorderSide(color: AppColors.teal),
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColors.surface,
@@ -109,13 +104,13 @@ class AppTheme {
         type: BottomNavigationBarType.fixed,
         elevation: 0,
       ),
-      dividerColor: AppColors.cardBorder,
       snackBarTheme: SnackBarThemeData(
-        backgroundColor: AppColors.card,
-        contentTextStyle: const TextStyle(color: AppColors.textPrimary),
+        backgroundColor: AppColors.black,
+        contentTextStyle: const TextStyle(color: Colors.white),
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
+      dividerColor: AppColors.cardBorder,
     );
   }
 }

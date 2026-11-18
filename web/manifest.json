@@ -3,9 +3,9 @@
     "short_name": "BJ Tracking",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0A0A0A",
-    "theme_color": "#2EC4B6",
-    "description": "Black Jack Tracking Flutter mobile app — snow & ice field operator (390×844)",
+    "background_color": "#F5F8F8",
+    "theme_color": "#1FA89C",
+    "description": "Black Jack Tracking customer live tracking app (390×844)",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

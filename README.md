@@ -1,32 +1,26 @@
-# Vanja Black Jack Tracking
+# Black Jack Tracking — Customer App
 
-Flutter field operator app for the **Next-Gen Snow & Ice Management Platform**.
+Fully functional Flutter customer tracking experience for snow removal in Revelstoke, BC.
 
-## Features (MVP)
+## Working features
 
-- Operator login & one-tap clock-in/out
-- Route list with optimize action
-- Live operations map (demo GPS / geofence)
-- Job detail with before/after photo proof
-- Material usage logging (salt, sand, de-icer)
-- Mobile preview frame: **390 × 844**
+- **Live tracking** with auto GPS updates (every 4s), pause/resume, manual refresh
+- **Proximity alerts** when the plow is within 5 stops
+- **Live map** with route progress, operator position, and completion state
+- **Daily temperature** from Open-Meteo (live API + offline fallback)
+- **Completion timestamp** when service finishes
+- **Star rating**
+  - 5★ → opens Google Reviews
+  - under 5★ → saved as internal admin feedback
+- **Profile preferences** persisted locally (SMS / email / proximity)
+- **Activity log** of tracking events
+- **Restart tracking** from Profile
+
+No invoicing or payment gateways.
 
 ## Run
 
 ```bash
 flutter pub get
-flutter run
-```
-
-Web preview:
-
-```bash
 flutter run -d chrome
-# or release build
-flutter build web --release
 ```
-
-## Stack
-
-- Flutter / Dart
-- Android, iOS, Web targets

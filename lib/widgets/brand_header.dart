@@ -16,11 +16,7 @@ class BrandHeader extends StatelessWidget {
     if (compact) {
       return Row(
         children: [
-          Image.asset(
-            'assets/images/logo.png',
-            height: 36,
-            fit: BoxFit.contain,
-          ),
+          Image.asset('assets/images/logo.png', height: 34, fit: BoxFit.contain),
           const SizedBox(width: 10),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,8 +25,8 @@ class BrandHeader extends StatelessWidget {
                 'BLACK JACK',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
-                  letterSpacing: 1.2,
-                  fontSize: 13,
+                  letterSpacing: 1.1,
+                  fontSize: 12,
                   color: AppColors.textPrimary,
                 ),
               ),
@@ -38,7 +34,7 @@ class BrandHeader extends StatelessWidget {
                 'T R A C K I N G',
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  letterSpacing: 2.4,
+                  letterSpacing: 2.2,
                   fontSize: 9,
                   color: AppColors.teal,
                 ),
@@ -49,14 +45,10 @@ class BrandHeader extends StatelessWidget {
       );
     }
 
-    return Column(
-      children: [
-        Image.asset(
-          'assets/images/logo.png',
-          height: logoHeight,
-          fit: BoxFit.contain,
-        ),
-      ],
+    return Image.asset(
+      'assets/images/logo.png',
+      height: logoHeight,
+      fit: BoxFit.contain,
     );
   }
 }
